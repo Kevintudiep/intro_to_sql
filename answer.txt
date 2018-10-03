@@ -1,0 +1,78 @@
+Answer 1
+
+SELECT name FROM robots WHERE(source = 'Star Wars');
+CP30
+R2D2
+
+Answer 2
+
+SELECT name FROM robots WHERE(personality = 'anxious');
+CP30
+
+Answer 3
+
+SELECT name FROM recipes WHERE(nut_free= 't');
+Butternut Squash Bake
+Vegetarian Bibimbap
+Quinoa and Black Beans
+Juicy Roasted Chickens
+Garlic Green Beans
+Stout Slow Cooker Corned Beef and Vegies
+
+Answer 4
+
+#why do we need something in count?
+SELECT COUNT(name) FROM recipe WHERE(gluten_free = true AND vegetarian = false);
+
+2
+
+Answer 5
+
+SELECT name FROM animals WHERE(number_of_legs=(SELECT MAX(number_of_legs) FROM animals));
+
+Octopus
+
+Answer 6
+
+SELECT name FROM board_games WHERE(mins_to_play=(SELECT MIN(mins_to_play) FROM board_games));
+
+Sushi GO
+Quixo
+
+Answer 7
+
+SELECT name FROM recipes WHERE(minutes_required=(SELECT MAX(minutes_required) FROM recipe));
+
+Stout slow cooker corned beef and veggies
+
+Answer 8
+
+SELECT name FROM robots WHERE(name LIKE 'M%');
+
+Marvin
+Mr.Butletron
+
+Answer 9
+
+SELECT COUNT(name) FROM board_games WHERE(max_players >= 8);
+
+3
+
+Answer 10
+
+SELECT name FROM animals WHERE(swimming=true AND egg_laying=true);
+
+Octopus
+Ducks
+
+Answer 11
+
+SELECT name FROM animals WHERE(swimming=true AND egg_laying=true AND flying=false);
+
+Octopus
+
+Answer 12
+
+SELECT name FROM board_games WHERE(max_players=(SELECT MAX(max_players) FROM board_games));
+
+Cards Against Humanity
